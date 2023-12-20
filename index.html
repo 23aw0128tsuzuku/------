@@ -8,12 +8,14 @@
     <meta property="og:site_name" content="TIRA site" />
     <meta property="og:title" content="=TIRA" />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/reset.css" />
     <link
       rel="stylesheet"
       href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
     />
-    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script
+      src="https://unpkg.com/swiper@7/swiper-bundle.min.js"
+      defer
+    ></script>
     <script src="js/script.js" defer></script>
   </head>
 
@@ -113,8 +115,8 @@
             </div>
           </div>
         </div>
-        <span id="nayami_prev" class="nayami_prev"></span>
-        <span id="nayami_next" class="nayami_next"></span>
+        <!-- <span id="nayami_prev" class="nayami_prev"></span>
+        <span id="nayami_next" class="nayami_next"></span> -->
       </section>
 
       <section>
@@ -149,18 +151,17 @@
               </div>
               <h3 class="POINT_title_02">バザルトストーンとは</h3>
             </dt>
-            <dd>
-              <p>
-                バザルトストーンは、温熱効果が高く、温める事で熱が冷めにくく<br />
-                遠赤外線効をを発揮する特徴があります。
-              </p>
-              <p>
-                <!-- <img
+            <dd class="dd_ad">
+              <div class="dd_flex">
+                <p>
+                  バザルトストーンは、温熱効果が高く、温める事で熱が冷めにくく遠赤外線効をを発揮する特徴があります。
+                </p>
+                <img
                   src="img/BazarutoStone.jpg"
                   alt="BazarutoStone"
                   class="BazarutoStone"
-                /> -->
-              </p>
+                />
+              </div>
             </dd>
           </div>
           <div class="POINT02">
@@ -171,11 +172,10 @@
               </div>
               <h3 class="POINT_title_02">遠赤外線効果とは</h3>
             </dt>
-            <dd>
+            <dd class="dd_ad">
               <p>
-                岩盤から発生する遠赤外線を利用することで体を芯から均一に温めることができます。
-                その結<br />
-                果、自律神経といった体内活動を活性化させ、新陳代謝を高めます。
+                岩盤から発生する遠赤外線を利用することで体を芯から均一に温めることができます。<br />
+                その結果、自律神経といった体内活動を活性化させ、新陳代謝を高めます。
               </p>
             </dd>
           </div>
@@ -187,19 +187,16 @@
               </div>
               <h3 class="POINT_title_02">期待できる効果</h3>
             </dt>
-            <dd>
+            <dd class="dd_ad">
               <p>
                 TIRAで男性が受けられるバザルトストーンのメニューは2つあります。<br />
 
-                【バザルトヘッドスパ】<br />
-                新感覚の揉まないヘッドスパです。温めたバザルトストーンを使いデコルテ→首肩→頭皮と順<br />
-                番に身体の深部から優しく緩めていきます。<br />
-                中々相談しずらい薄毛や白髪などの頭皮環境のお悩みから、ストレス・目の疲れ・リフトアッ<br />
-                プケアなどにもオススメです。<br />
+                <br />【バザルトヘッドスパ】<br />
+                新感覚の揉まないヘッドスパです。温めたバザルトストーンを使いデコルテ→首肩→頭皮と順番に身体の深部から優しく緩めていきます。<br />
+                中々相談しずらい薄毛や白髪などの頭皮環境のお悩みから、ストレス・目の疲れ・リフトアップケアなどにもオススメです。<br />
 
-                【バザルトフェイシャル】<br />
-                お肌の細胞から活性化され、コラーゲン生成やお肌のターンオーバーを整え、ニキビケア・毛<br />
-                穴ケア・シワ・たるみ・浮腫・乾燥肌・リフトアップケア・小顔に導くお手伝いを致します。
+                <br />【バザルトフェイシャル】<br />
+                お肌の細胞から活性化され、コラーゲン生成やお肌のターンオーバーを整え、ニキビケア・毛穴ケア・シワ・たるみ・浮腫・乾燥肌・リフトアップケア・小顔に導くお手伝いを致します。
               </p>
             </dd>
           </div>
@@ -308,48 +305,23 @@
           <div class="manga_text">
             <p class="dai1wa">第1話</p>
             <p class="manga_title">俺、美に目覚める</p>
-            <button class="button js-modal-button">読む</button>
-            <div class="layer js-modal">
-              <div class="modal">
-                <div class="modal__inner">
-                  <!-- ×ボタン追記 -->
-                  <div class="modal__button-wrap">
-                    <button class="close-button js-close-button">
-                      <span></span>
-                      <span></span>
-                    </button>
+            <button class="botan_yomu">読む</button>
+            <div class="modal">
+              <div class="bg"></div>
+              <div class="batu"></div>
+              <div class="swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img src="img/manga_1.JPG" alt="manga_1" class="manga" />
                   </div>
-                  <div class="modal__contents">
-                    <div class="modal__content">
-                      <img
-                        src="img/manga_1.JPG"
-                        alt="manga_1"
-                        class="manga_modal_1"
-                      />
-                      <img
-                        src="img/manga_2.JPG"
-                        alt="manga_2"
-                        class="manga_modal_2"
-                      />
-                    </div>
+                  <div class="swiper-slide">
+                    <img src="img/manga_2.JPG" alt="manga_2" class="manga" />
                   </div>
                 </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
               </div>
             </div>
-            <div class="swiper modalInSlider">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide modalInSlider"><p class="swiperText">スライド1</p></div>
-            <div class="swiper-slide modalInSlider"><p class="swiperText">スライド2</p></div>
-            <div class="swiper-slide modalInSlider"><p class="swiperText">スライド3</p></div>
-            <div class="swiper-slide modalInSlider"><p class="swiperText">スライド4</p></div>
-            <div class="swiper-slide modalInSlider"><p class="swiperText">スライド5</p></div>
-            <div class="swiper-slide modalInSlider"><p class="swiperText">スライド6</p></div>
-          </div>
-        </div>
-        </div>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
-      </div>
             <p class="manga_kousin">
               毎月 <span class="kousin_span">1</span>日<span class="kousin_span"
                 >10</span

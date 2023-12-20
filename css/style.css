@@ -258,30 +258,21 @@ img.img_01 {
   font-size: 1.5rem;
   letter-spacing: 0.5rem;
 }
-/*POINT*/
 
+/*POINT*/
 #POINT {
   padding-top: 20px;
 }
 
-.POINT_ac {
-  display: block;
-  width: 200px;
-  height: 50px;
-  line-height: 50px;
-  text-align: center;
-  border: #666 1px solid;
-  cursor: pointer;
+dt {
+  display: flex;
+  align-items: center;
+  background-color: #c9c9c9;
+  margin: 0;
 }
 
-.POINT_ac dd {
-  background: #f2f2f2;
-  width: 200px;
-  height: 50px;
-  line-height: 50px;
-  text-align: center;
-  border: #666 1px solid;
-  display: none;
+dd {
+  margin: 0;
 }
 
 .POINT01,
@@ -289,15 +280,14 @@ img.img_01 {
 .POINT03 {
   width: 70%;
   height: fit-content;
-  background-color: #c9c9c9;
-  display: flex;
   align-items: center;
-  padding: 40px 60px;
+  padding: 0 60px;
   margin: auto;
-  margin-bottom: 60px;
+  margin-bottom: 20px;
   gap: 30px;
   color: #29305f;
   letter-spacing: 0.1rem;
+  height: 307px;
 }
 
 .POINT {
@@ -305,9 +295,44 @@ img.img_01 {
   margin-right: 23px;
 }
 
+.POINT::after {
+  width: 20%;
+  height: 10%;
+}
+
+.POINT::before {
+  width: 20%;
+  height: 10%;
+}
+
+.dd_ad {
+  transition: all ease 1s;
+  transform: translateY(-35%);
+  opacity: 0;
+  background-color: #c9c9c9;
+  z-index: -1;
+  position: relative;
+  margin: 0;
+  padding: 40px;
+}
+
+.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
 .POINT p {
   margin: 0 0 0 65px;
   line-height: 20px;
+}
+
+img.BazarutoStone {
+  width: 40%;
+}
+
+.dd_flex {
+  display: flex;
+  gap: 50px;
 }
 
 .POINT_title,
@@ -496,7 +521,7 @@ img.manga_1 {
   margin: 2rem;
 }
 
-.button {
+.botan_yomu {
   letter-spacing: 0.2rem;
   background: #c9c9c9;
   color: #29305f;
@@ -509,79 +534,79 @@ img.manga_1 {
   font-family: "shippori Mincho", serif;
   border: none;
 }
+.swiper {
+  width: 100%;
+}
 
-/* モーダルコンテンツ */
-.layer {
-  z-index: -1;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.5s linear, visibility 0.5s linear, z-index 1s linear;
+.manga {
+  width: 30%;
+}
+
+.swiper-wrapper {
+  text-align: center;
+}
+
+.swiper {
+  width: 90%;
 }
 
 .modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  align-items: center;
+  display: none;
+  z-index: 5;
+  transition: all ease 0.5s;
+}
+
+.no-sc {
+  overflow: hidden;
+}
+
+.grid {
+  display: grid;
+}
+
+.batu {
   position: relative;
-  margin-right: auto;
-  margin-left: auto;
-  width: 80%;
-  min-width: 440px;
-  opacity: 0;
-  visibility: hidden;
-  /* transition: visibility 0.7s linear, opacity 0.7s linear; */
+  top: 95%;
+  left: 16%;
 }
 
-.layer.is-open {
-  z-index: 999;
-  opacity: 1;
-  visibility: visible;
-}
-
-.layer.is-open .modal {
-  opacity: 1;
-  visibility: visible;
-}
-
-.modal__content {
-  position: fixed;
-  top: 50%;
-  display: flex;
-}
-
-.modal__button-wrap {
-  right: 170px;
-  top: 95px;
-  display: inline-flex;
-  position: fixed;
-}
-
-.close-button {
-  border-radius: 50%;
-  padding: 0;
-  border: transparent;
-  cursor: pointer;
-}
-
-.close-button span {
-  width: 25px;
-  height: 2px;
-  background: #fff;
-  display: inline-block;
+.batu::before,
+.batu::after {
+  content: "";
   position: absolute;
-  left: calc(50% - 12px);
-  top: 50%;
-  border-radius: 20px;
+  width: 32px;
+  height: 2px;
+  background-color: #c9c9c9;
+  z-index: 11;
 }
 
-.close-button span:nth-child(1) {
-  transform: rotate(45deg) translate(-1px, -1px);
+.batu::before {
+  transform: rotate(45deg);
 }
 
-.close-button span:nth-child(2) {
-  transform: rotate(-45deg) translate(1px, -1px);
+.batu::after {
+  transform: rotate(-45deg);
 }
 
-.manga_modal_1,
-.manga_modal_2 {
-  width: 60%;
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  color: #c9c9c9;
+}
+
+.bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background-color: #00000066;
 }
 
 .manga_kousin {

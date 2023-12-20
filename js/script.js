@@ -39,25 +39,54 @@ window.addEventListener("scroll", () => {
     : (scroll.style.opacity = 0);
 });
 
-/*モーダルウィンドウ*/
-const modal = document.querySelector(".js-modal"); // layer要素に付与したjs-modalクラスを取得し変数に格納
-const modalButton = document.querySelector(".js-modal-button"); // button要素に付与したjs-modal-buttonクラスを取得し、変数に格納
-const modalClose = document.querySelector(".js-close-button"); // xボタンのjs-close-buttonを取得し変数に格納
-// モーダルボタンをクリックしたときのイベントを登録
-modalButton.addEventListener("click", () => {
-  modal.classList.add("is-open");
-});
-
-modalClose.addEventListener("click", () => {
-  // xボタンをクリックしたときのイベントを登録
-  modal.classList.remove("is-open");
-});
-
 const swiper = new Swiper(".swiper", {
+  // Optional parameters
   loop: true,
+  centeredSlides: true,
+
+  // If we need pagination
+  pagination: {
+    el: ".swiper-pagination",
+  },
+
+  // Navigation arrows
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
-  spaceBetween: 30, //任意のマージン
 });
+
+const btn = document.querySelector(".botan_yomu");
+const modal = document.querySelector(".modal");
+const batu = document.querySelector(".batu");
+const bg = document.querySelector(".bg");
+
+btn.addEventListener("click", () => {
+  console.log("click");
+  modal.classList.toggle("grid");
+  bg.classList.toggle("grid");
+  document.body.classList.toggle("no-sc");
+});
+
+batu.addEventListener("click", () => {
+  console.log("click");
+  modal.classList.toggle("grid");
+  bg.classList.toggle("grid");
+  document.body.classList.toggle("no-sc");
+});
+
+/*アコーディオン*/
+const dt = document.querySelectorAll("dt");
+console.log(dt);
+const dd_ad = document.querySelectorAll(".dd_ad");
+for (let i = 0; i < dt.length; i++) {
+  dt[i].addEventListener("click", () => {
+    for (let l = 0; l < dt.length; l++) {
+      document.querySelector(`.POINT0${l + 1}`).style.marginBottom = 0;
+    }
+    dd_ad[i].classList.toggle("active");
+    const h = dd_ad[i].clientHeight;
+    console.log(`POINT0${i + 1} ${h}`);
+    document.querySelector(`.POINT0${i + 1}`).style.marginBottom = `${h}px`;
+  });
+}
