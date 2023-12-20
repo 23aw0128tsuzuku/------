@@ -1,0 +1,991 @@
+@import url("https://fonts.googleapis.com/css2? family= BIZ+UDPMincho & family= GFS+Didot & family=さわらび+明朝& family=しっぽり+明朝:wght@500 & family= Zen+Maru+Gothic:wght@700 & display=swap");
+@import url("https://fonts.googleapis.com/css2?family=BIZ+UDPMincho&family=GFS+Didot&family=Zen+Maru+Gothic:wght@700&display=swap");
+
+/*font-family: 'しっぽり明朝'、セリフ;*/ /*日本語*/
+/* font-family: 'GFS Didot', serif; */ /*英語*/
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #29305f;
+  font-family: "shippori Mincho", serif;
+  letter-spacing: 0.2em;
+  min-width: 1280px;
+}
+
+h2 {
+  color: #c9c9c9;
+  text-align: center;
+  font-size: 1.2rem;
+  letter-spacing: 0.2rem;
+  margin: 8rem 0;
+  font-weight: lighter;
+}
+
+/*予約*/
+.reservation {
+  display: flex;
+  letter-spacing: 0.5rem;
+  background: #cd9935;
+  width: fit-content;
+  border-radius: 10px;
+  padding: 1px 150px 1px 150px;
+  font-size: 1.4rem;
+  margin: auto;
+  position: relative;
+  margin: 10rem auto;
+  letter-spacing: 0.2rem;
+}
+
+.reservation a {
+  color: #c9c9c9;
+  text-decoration: none;
+}
+
+.reservation a::after {
+  content: "→";
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
+  position: absolute;
+}
+
+.nav_sticky {
+  position: fixed; /* 位置を固定する */
+  top: 0; /* 固定する位置を指定 */
+  left: 0; /* 固定する位置を指定 */
+  width: 100%; /* ヘッダーの幅 */
+  height: 80px; /* ヘッダーの高さ */
+  background: #29305f; /* 背景色 */
+  z-index: 99;
+}
+
+.yoyaku_yajirusi {
+  margin-left: 20px;
+}
+
+/*ヘッダー*/
+header {
+  padding: 0;
+  margin: 0;
+  /* height: 48px; */
+}
+
+.logo {
+  margin: 15px 0 0 0;
+}
+
+img.logo {
+  width: 8%;
+  margin: 0 0 0 20px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.yoyaku_1 {
+  background: #cd9935;
+  padding: 4px 13px;
+  width: fit-content;
+  position: absolute;
+  font-size: 1.2rem;
+  border-radius: 10px; /*四角にする*/
+  right: 68rem;
+  margin: 0;
+  top: 20px;
+  letter-spacing: 0;
+}
+
+.yoyaku_1 a {
+  color: #c9c9c9;
+  text-decoration: none;
+}
+
+#hbg-menu-body-wrap {
+  display: flex;
+}
+
+.hbg-menu-body-1 {
+  color: #c9c9c9;
+  display: flex;
+  position: absolute;
+  right: 2em;
+  font-size: 1.2rem;
+  top: 25px;
+  margin: 0;
+}
+
+.hbg-menu-body-1 a {
+  color: #c9c9c9;
+  text-decoration: none;
+}
+
+.hbg-menu-body-1 li {
+  margin-left: 2em;
+  letter-spacing: 0.1em; /*文字間隔*/
+}
+
+.hbg_POINT {
+  display: none;
+}
+
+/*キービジュアル*/
+img.img_01 {
+  width: 100%;
+  margin: auto;
+  display: block;
+  margin-top: 68px;
+}
+
+.sp_kv {
+  display: none;
+}
+
+.keyvisual {
+  text-align: center;
+  font-size: 2.1em;
+  position: relative;
+}
+
+.text_01 {
+  /* margin: 0 0 0 50%; */
+  /* position: absolute; */
+  writing-mode: vertical-rl;
+  letter-spacing: 0.2em;
+}
+
+.keyvisual_title_01 {
+  color: #29305f;
+}
+
+.keyvisual_title_02 {
+  color: #cd9935;
+}
+
+.konseputo {
+  position: absolute;
+  right: 50%;
+  top: 13%;
+  transform: translateX(50%);
+}
+
+/* 悩み  */
+.nayami {
+  /* display: flex; */
+  width: 100%;
+  height: 300px;
+  position: relative;
+  overflow: hidden; /* はみ出したスライドを隠す */
+}
+
+.nayami_slide {
+  /*スライド全体 */
+  width: 300%;
+  height: 100%;
+  display: flex;
+  transition: all 0.3s;
+}
+
+.nayami_h {
+  font-family: "GFS Didot", serif;
+  color: #29305f;
+}
+
+.nayami_p {
+  color: #29305f;
+  line-height: 1.3rem;
+  font-size: 0.9rem;
+}
+
+.nayami_box {
+  width: 100%;
+  height: 320px;
+  text-align: center;
+  background-color: #c9c9c9;
+  padding: 20px;
+}
+
+.nayami_img {
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+}
+
+.nayami_next {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  right: 10px;
+  bottom: 50%;
+  z-index: 10;
+  cursor: pointer;
+  border-top: solid 3px #000;
+  border-right: solid 3px #000;
+  -webkit-transform: rotate(45deg) translateY(50%);
+  transform: rotate(45deg) translateY(50%);
+}
+.nayami_prev {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  left: 25px;
+  bottom: 50%;
+  z-index: 10;
+  cursor: pointer;
+  border-top: solid 3px #000;
+  border-right: solid 3px #000;
+  -webkit-transform: rotate(-135deg) translateY(-50%);
+  transform: rotate(-135deg) translateY(-50%);
+}
+
+/*気になること*/
+.text_02 {
+  color: #c9c9c9;
+  font-size: 2.3rem;
+  text-align: center;
+  line-height: 11rem;
+  margin: 8rem 0;
+}
+
+.text_02_sp {
+  display: none;
+}
+
+.text_span {
+  font-size: 1.5rem;
+  letter-spacing: 0.5rem;
+}
+/*POINT*/
+
+#POINT {
+  padding-top: 20px;
+}
+
+.POINT_ac {
+  display: block;
+  width: 200px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  border: #666 1px solid;
+  cursor: pointer;
+}
+
+.POINT_ac dd {
+  background: #f2f2f2;
+  width: 200px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  border: #666 1px solid;
+  display: none;
+}
+
+.POINT01,
+.POINT02,
+.POINT03 {
+  width: 70%;
+  height: fit-content;
+  background-color: #c9c9c9;
+  display: flex;
+  align-items: center;
+  padding: 40px 60px;
+  margin: auto;
+  margin-bottom: 60px;
+  gap: 30px;
+  color: #29305f;
+  letter-spacing: 0.1rem;
+}
+
+.POINT {
+  text-align: center;
+  margin-right: 23px;
+}
+
+.POINT p {
+  margin: 0 0 0 65px;
+  line-height: 20px;
+}
+
+.POINT_title,
+.POINT_number {
+  font-family: "GFS Didot", serif;
+}
+
+.POINT_title_02 {
+  gap: 10px;
+  color: #29305f;
+  font-weight: lighter;
+}
+
+/*MENU*/
+#MENU {
+  padding-top: 130px;
+}
+
+.MENU_title {
+  margin: 0 0 30px 0;
+  color: #29305f;
+  font-family: "GFS Didot", serif;
+  letter-spacing: 0.1rem;
+}
+
+.MENU {
+  margin: 0 auto;
+  background-color: #c9c9c9;
+  color: #29305f;
+  width: 90%;
+  padding: 5% 0 5% 0;
+}
+
+.MENU_flex {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.MENU_boder {
+  width: 90%;
+  height: 90%;
+  margin: auto;
+  border: 1px solid #29305f;
+  padding: 60px 0 60px 0;
+}
+
+.MENU_01,
+.MENU_02 {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.Bazarutoheadspa,
+.Bazarutofacial {
+  width: 100%;
+  max-width: 55%;
+}
+
+.MENU_text_01 {
+  font-weight: bold;
+  font-size: 1.2rem;
+  letter-spacing: 0.1rem;
+}
+
+.MENU_text_02 {
+  line-height: 1.3rem; /*行間*/
+  font-size: 0.9rem;
+}
+
+/*メインコンテンツ*/
+#main {
+  padding-top: 150px;
+}
+
+img.maincontents_pc {
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+}
+
+img.maincontents_sp {
+  display: none;
+}
+
+.CHARACTER {
+  color: #c9c9c9;
+  font-size: 1.2rem;
+  text-align: center;
+  margin: 8rem;
+  font-weight: lighter;
+  font-family: "GFS Didot", serif;
+  letter-spacing: 0.1rem;
+}
+
+.CHARACTER_flex {
+  display: flex;
+  min-width: 55%;
+  width: 70%;
+  margin: 0 auto;
+  gap: 20%;
+}
+
+.CHARACTER_01,
+.CHARACTER_02 {
+  margin: 0 auto;
+  background-color: #c9c9c9;
+  color: #29305f;
+  width: 90%;
+  padding: 5% 0 5% 0;
+}
+
+.CHARACTER_01 p,
+.CHARACTER_02 p {
+  line-height: 1.3rem;
+  color: #29305f;
+  text-align: center;
+}
+
+.CHARACTER_people {
+  font-size: 1.2rem;
+  margin: 35px 0 10px 0;
+  font-weight: bold;
+}
+
+.CHARACTER_shoukai {
+  font-size: 0.9rem;
+  margin: 0 auto;
+}
+
+img.character_1,
+img.character_2 {
+  width: 100%;
+  max-width: 55%;
+  display: block;
+  margin: 0 auto;
+}
+
+.saisinwa {
+  letter-spacing: 0.2rem;
+  background: #c9c9c9;
+  color: #29305f;
+  width: fit-content;
+  border-radius: 10px;
+  padding: 1px 150px 1px 150px;
+  font-size: 1.4rem;
+  margin: 8rem auto;
+  position: relative;
+}
+
+.saisinwa::after {
+  content: "↓";
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
+  position: absolute;
+}
+
+.manga_flex {
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+}
+
+img.manga_1 {
+  box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.45);
+  width: 350px;
+  gap: 70px;
+}
+
+.manga_text {
+  color: #c9c9c9;
+  text-align: center;
+  margin: 3rem 0 0 0;
+}
+
+.dai1wa {
+  font-size: 1.3rem;
+  margin: 2rem;
+}
+
+.manga_title {
+  font-size: 1.2rem;
+  margin: 2rem;
+}
+
+.button {
+  letter-spacing: 0.2rem;
+  background: #c9c9c9;
+  color: #29305f;
+  width: fit-content;
+  border-radius: 10px;
+  padding: 1px 30px 1px 30px;
+  font-size: 1.4rem;
+  margin: 3rem auto;
+  position: relative;
+  font-family: "shippori Mincho", serif;
+  border: none;
+}
+
+/* モーダルコンテンツ */
+.layer {
+  z-index: -1;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s linear, visibility 0.5s linear, z-index 1s linear;
+}
+
+.modal {
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+  width: 80%;
+  min-width: 440px;
+  opacity: 0;
+  visibility: hidden;
+  /* transition: visibility 0.7s linear, opacity 0.7s linear; */
+}
+
+.layer.is-open {
+  z-index: 999;
+  opacity: 1;
+  visibility: visible;
+}
+
+.layer.is-open .modal {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal__content {
+  position: fixed;
+  top: 50%;
+  display: flex;
+}
+
+.modal__button-wrap {
+  right: 170px;
+  top: 95px;
+  display: inline-flex;
+  position: fixed;
+}
+
+.close-button {
+  border-radius: 50%;
+  padding: 0;
+  border: transparent;
+  cursor: pointer;
+}
+
+.close-button span {
+  width: 25px;
+  height: 2px;
+  background: #fff;
+  display: inline-block;
+  position: absolute;
+  left: calc(50% - 12px);
+  top: 50%;
+  border-radius: 20px;
+}
+
+.close-button span:nth-child(1) {
+  transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.close-button span:nth-child(2) {
+  transform: rotate(-45deg) translate(1px, -1px);
+}
+
+.manga_modal_1,
+.manga_modal_2 {
+  width: 60%;
+}
+
+.manga_kousin {
+  font-size: 1.2rem;
+  margin: 6rem;
+}
+
+.kousin_span {
+  font-size: 2.3rem;
+  color: #c38529;
+}
+
+/*TOPへ戻る*/
+
+.TOP {
+  clip-path: circle(40% at 50% 50%);
+  background-color: #c9c9c9;
+  color: #29305f;
+  padding: 50px;
+  font-family: "GFS Didot", serif;
+  letter-spacing: 0.1rem;
+  text-decoration: underline #29305f;
+  text-underline-offset: 8px;
+  position: fixed;
+  bottom: 30px;
+  right: 40px;
+  z-index: 99;
+}
+
+/*フッター*/
+footer {
+  text-align: center;
+}
+
+.toufu img.logo_02 {
+  width: 8%;
+  margin: 0;
+  position: relative;
+  top: 125px;
+  /* margin-top: 160px; */
+  /* margin-left: 50%;
+  transform: translateX(-50%); */
+}
+
+.nav_footer::after {
+  content: "";
+  background-color: #c9c9c9;
+  width: 100%;
+  height: 1px;
+  top: -108px;
+  position: absolute;
+  right: 50%;
+  transform: translateX(50%);
+}
+
+.nav_footer {
+  display: flex;
+  width: fit-content;
+  margin: auto;
+  position: relative;
+}
+
+.nav_footer a {
+  color: #c9c9c9;
+  text-decoration: none;
+}
+
+.nav_footer li {
+  letter-spacing: 0.1em;
+  margin: 13rem 2rem 0 0;
+}
+
+small {
+  font-family: "GFS Didot", serif;
+  letter-spacing: 0.01rem;
+  color: #c9c9c9;
+  font-size: 0.7rem;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    min-width: 600px;
+  }
+
+  img.logo {
+    width: 13%;
+    margin: 0 0 0 17px;
+  }
+  img.img_01 {
+    display: none;
+  }
+
+  img.sp_kv {
+    width: 100%;
+    margin: auto;
+    display: block;
+  }
+
+  #hbg-menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 99;
+  }
+  #hbg-btn {
+    height: 40px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    cursor: pointer;
+    position: fixed;
+    margin-top: 20px;
+    margin-left: 16px;
+    width: 11%;
+    margin-right: 26px;
+  }
+  .btn-line,
+  .btn-line::before,
+  .btn-line::after {
+    content: "";
+    /* height: 1px; */
+    /* height: 2px; */
+    width: 40px;
+    background-color: #f5f5f5;
+    position: absolute;
+    /* transition: all 0.5s 0s ease; */
+    transition: all ease 1s;
+    /* transform: scaleY(0.5) translateY(1px); */
+  }
+
+  /* .btn-line {
+    width: 40px;
+    height: 1px;
+  } */
+
+  .btn-line::before {
+    top: -10px;
+    position: absolute;
+    height: 1px;
+  }
+  .btn-line {
+    display: block;
+    position: relative;
+    height: 2px;
+  }
+  .btn-line::after {
+    top: 10px;
+    position: absolute;
+    height: 1px;
+  }
+  .btn-line-clicked::before {
+    top: 0;
+    transform: rotate(45deg);
+    height: 1.5px;
+  }
+  .btn-line-clicked {
+    /* background-color: #29305f; */
+    background-color: transparent;
+  }
+  .btn-line-clicked::after {
+    top: 0;
+    transform: rotate(-45deg);
+    height: 1.5px;
+  }
+  /* メニュー本体の設定 */
+
+  #hbg-menu-body-wrap {
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    right: -110vw;
+  }
+
+  .hbg-menu-body {
+    width: 100%;
+    height: 100%;
+    background-color: #29305f;
+    position: fixed;
+    right: -100vw;
+    visibility: hidden;
+    transition: 0.5s ease;
+    list-style: none;
+  }
+  .hbg-menu-body-clicked {
+    right: 0vw;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .hbg-menu-body-1 {
+    margin: 88px;
+    display: block;
+    top: 175px;
+  }
+
+  .hbg-menu-body-1 > li {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .hbg-menu-body-1 > li > a {
+    color: #fff;
+    font-weight: 700;
+    padding: 16px 10px;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    line-height: 2;
+  }
+
+  #hbg-menu-body-innerUl {
+    padding: 0;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+  }
+  #hbg-menu-body-innerUl > li {
+    padding-left: 10px;
+    margin: 20px 10px 20px 0;
+    height: 48px;
+  }
+  #hbg-menu-body-innerUl > li > a {
+    width: 48px;
+    height: 48px;
+    background-color: #fff;
+    display: flex;
+  }
+  #hbg-menu-body-innerUl > li > a > img {
+    width: 38px;
+    margin: 0 auto;
+  }
+
+  .konseputo {
+    position: absolute;
+    right: 50%;
+    top: 20%;
+    transform: translateX(50%);
+  }
+
+  .TOP {
+    bottom: 20px;
+    right: 0px;
+  }
+
+  .text_02 {
+    color: #c9c9c9;
+    font-size: 8vw;
+    line-height: 5rem;
+    margin: 8rem 0 8rem 7rem;
+    text-align: left;
+  }
+
+  .text_02_sp {
+    display: block;
+  }
+
+  .reservation {
+    padding: 0px 70px 0 70px;
+    letter-spacing: 0.1rem;
+  }
+
+  .POINT p {
+    margin: 0;
+    line-height: 20px;
+  }
+
+  .MENU_flex {
+    width: fit-content;
+    margin: auto;
+    display: block;
+    margin: 75px auto;
+  }
+
+  .MENU_01,
+  .MENU_02 {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .MENU_02 {
+    margin: 110px auto;
+  }
+
+  .MENU_text_01 {
+    font-weight: bold;
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+  }
+
+  .MENU_text_02 {
+    font-size: 1.3rem;
+    line-height: 2.2rem;
+  }
+
+  img.maincontents_pc {
+    display: none;
+  }
+
+  img.maincontents_sp {
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .CHARACTER_flex {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+  }
+
+  .manga_flex {
+    display: block;
+    margin: 0 auto;
+    width: fit-content;
+    text-align: center;
+  }
+
+  .nav_footer {
+    color: #c9c9c9;
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+    padding: 122px 0 0 33px;
+  }
+
+  .manga_img {
+    width: 100%; /* 適当な幅を指定 */
+    height: 300px; /* 適当な高さを指定 */
+  }
+
+  img.manga_1 {
+    box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.45);
+    width: 300px; /* 適当な幅を指定 */
+  }
+
+  .manga_text {
+    color: #c9c9c9;
+    text-align: center;
+    margin: 12rem 0 0 0;
+  }
+
+  .dai1wa {
+    font-size: 1.3rem;
+    margin: 2rem;
+  }
+
+  .manga_title {
+    font-size: 1.2rem;
+    margin: 2rem;
+  }
+
+  .manga_yomu {
+    background: #c9c9c9;
+    padding: 10px;
+    color: #29305f;
+    border-radius: 10px;
+    font-size: 1.3rem;
+    margin: 3rem auto;
+    width: 20%;
+  }
+
+  .manga_kousin {
+    font-size: 1.2rem;
+    margin: 6rem;
+  }
+
+  .kousin_span {
+    font-size: 2.3rem;
+    color: #c38529;
+  }
+
+  .CHARACTER_01,
+  .CHARACTER_02 {
+    margin: 0 auto;
+    background-color: #c9c9c9;
+    color: #29305f;
+    width: 60%;
+    padding: 5% 0 5% 0;
+  }
+
+  .CHARACTER_02 {
+    margin-top: 100px;
+  }
+
+  h1 .tofu {
+    margin: 0 auto;
+  }
+
+  .toufu img.logo_02 {
+    width: 20%;
+    margin: 0;
+    position: relative;
+    top: 105px;
+  }
+
+  .nav_footer li {
+    letter-spacing: 0.1em;
+    margin: 4rem 2rem 0 0;
+  }
+}
